@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration status="off" name="test">  
+    <!-- 添加输出源 -->  
+    <Appenders>  
+        <!-- 添加控制台输出源  
+        PatternLayout用于格式化日志文本 并输出到指定的输出源    
+         -->  
+        <Console name="out" target="SYSTEM_OUT">  
+            <PatternLayout pattern="%d{yyyy-MMM-dd HH:mm:ss} [%t] %-5p: %m%n"></PatternLayout>  
+        </Console>  
+    </Appenders>  
+    <!-- 添加记录器 -->  
+    <Loggers>  
+        <!-- 配置根记录器 如果不设置的话  level为error appender为控制台 -->  
+        <root level="trace">  
+            <AppenderRef ref="out" />  
+        </root>  
+    </Loggers>  
+</Configuration>  
